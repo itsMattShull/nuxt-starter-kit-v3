@@ -97,6 +97,20 @@ DATABASE_PASSWORD=SOME_PASSWORD
 DATABASE_NAME=NAME_OF_MYSQL_DATABASE
 LIVE_URL={ex: something.com}
 ```
+- Run `sudo apt install mysql` and create a mysql database with the following table:
+```
+CREATE DATABASE database_name;
+
+CREATE TABLE users (
+     ID INT NOT NULL AUTO_INCREMENT,
+     email CHAR(255) NOT NULL,
+     password CHAR(255) NOT NULL,
+     FirstName CHAR(255) NOT NULL,
+     LastName CHAR(255) NOT NULL,
+     IsAdmin boolean not null default 0
+     PRIMARY KEY (ID)
+);
+```
 
 When a change is made and you want to publish the changes to the server, use terminal to ssh into the digitalocean server and using the following command `cd /var/www/{NAME_OF_APP} && git pull origin main && npm install && npm run --silent build && pm2 restart 0`
 
