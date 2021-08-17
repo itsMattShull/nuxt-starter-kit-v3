@@ -60,4 +60,8 @@ export default {
   serverMiddleware: [
     '~/server/index.js'
   ],
+
+  bootstrapVue: {
+    icons: true
+  }
 }

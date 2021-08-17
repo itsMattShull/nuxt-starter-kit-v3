@@ -1,23 +1,25 @@
 <template>
-  <main>The admin</main>
+  <AdminNav />
 </template>
 
 <script>
+import AdminNav from '~/components/AdminNav.vue'
+
 export default {
+  components: {
+    AdminNav
+  },
   middleware: 'auth',
+  data () {
+    return {
+      // data goes here
+    }
+  },
   mounted () {
-    // create logout button.
+    // stuff goes here
   },
   methods: {
-    async logout () {
-      try {
-        await this.$store.dispatch('logout')
-        window.location.replace('/')
-      } catch (e) {
-        // eslint-disable-next-line
-        console.log(e)
-      }
-    }
+    // stuff goes here
   }
 }
 </script>

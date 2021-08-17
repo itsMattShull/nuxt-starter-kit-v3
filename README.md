@@ -111,6 +111,7 @@ CREATE TABLE users (
      PRIMARY KEY (ID)
 );
 ```
+- In Ngnix, forward all non-www traffic to www
 
 When a change is made and you want to publish the changes to the server, use terminal to ssh into the digitalocean server and using the following command `cd /var/www/{NAME_OF_APP} && git pull origin main && npm install && npm run --silent build && pm2 restart 0`
 
